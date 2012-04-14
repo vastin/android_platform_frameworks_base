@@ -111,6 +111,9 @@
     <!-- Label in system panel saying the device will show notifications [CHAR LIMIT=30] -->
     <string name="status_bar_settings_notifications">Notifications</string>
 
+    <!-- Label in system panel saying the device will show notifications [CHAR LIMIT=30] -->
+    <string name="status_bar_settings_power">Power off</string>
+
     <!-- Text to display next to the graphical battery meter.  [CHAR LIMIT=3] -->
     <string name="status_bar_settings_battery_meter_format" translatable="false">
         <xliff:g id="number">%d</xliff:g><xliff:g id="percent">%%</xliff:g>

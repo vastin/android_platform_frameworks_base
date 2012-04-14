@@ -5329,6 +5329,10 @@ public class WindowManagerService extends IWindowManager.Stub
         //       an orientation that has different metrics than it expected.
         //       eg. Portrait instead of Landscape.
 
+	if (mForcedAppOrientation == ActivityInfo.SCREEN_ORIENTATION_PORTRAIT||mForcedAppOrientation == ActivityInfo.SCREEN_ORIENTATION_REVERSE_PORTRAIT||mForcedAppOrientation == ActivityInfo.SCREEN_ORIENTATION_SENSOR_PORTRAIT) {
+	mForcedAppOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE;
+	}
+
         int rotation = mPolicy.rotationForOrientationLw(mForcedAppOrientation, mRotation);
         boolean altOrientation = !mPolicy.rotationHasCompatibleMetricsLw(
                 mForcedAppOrientation, rotation);

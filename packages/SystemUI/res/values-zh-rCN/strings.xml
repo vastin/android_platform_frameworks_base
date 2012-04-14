@@ -46,6 +46,7 @@
     <string name="status_bar_settings_mute_label" msgid="554682549917429396">"静音"</string>
     <string name="status_bar_settings_auto_brightness_label" msgid="511453614962324674">"自动"</string>
     <string name="status_bar_settings_notifications" msgid="397146176280905137">"通知"</string>
+    <string name="status_bar_settings_power" msgid="397146176280905138">"关机"</string>
     <string name="bluetooth_tethered" msgid="7094101612161133267">"已通过蓝牙共享网络"</string>
     <string name="status_bar_input_method_settings_configure_input_methods" msgid="3504292471512317827">"设置输入法"</string>
     <string name="status_bar_use_physical_keyboard" msgid="3695516942412442936">"使用物理键盘"</string>

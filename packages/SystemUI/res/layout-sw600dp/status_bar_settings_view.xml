@@ -24,7 +24,7 @@
         >
 
     <!-- Airplane mode -->
-    <LinearLayout
+<!--    <LinearLayout
             android:id="@+id/airplane"
             style="@style/StatusBarPanelSettingsRow"
             >
@@ -47,7 +47,7 @@
                 />
     </LinearLayout>
     <View style="@style/StatusBarPanelSettingsPanelSeparator" />
-
+-->
     <!-- Network -->
     <LinearLayout
             android:id="@+id/network"
@@ -67,7 +67,7 @@
     <View style="@style/StatusBarPanelSettingsPanelSeparator" />
 
     <!-- Rotation lock -->
-    <LinearLayout
+<!--    <LinearLayout
             android:id="@+id/rotate"
             style="@style/StatusBarPanelSettingsRow"
             >
@@ -87,6 +87,25 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_vertical"
                 android:layout_marginRight="5dp"
+                />
+    </LinearLayout>
+    <View style="@style/StatusBarPanelSettingsPanelSeparator" />
+-->
+
+    <!-- Volumes -->
+    <LinearLayout style="@style/StatusBarPanelSettingsRow" >
+        <ImageView
+                android:id="@+id/volumes_icon"
+                style="@style/StatusBarPanelSettingsIcon"
+                android:src="@drawable/ic_settings_sound"
+                />
+        <com.android.systemui.statusbar.policy.ToggleSlider
+                android:id="@+id/volumes"
+                android:layout_width="0dp"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="2dp"
+                systemui:text="@string/status_bar_settings_mute_label"
                 />
     </LinearLayout>
     <View style="@style/StatusBarPanelSettingsPanelSeparator" />
@@ -110,7 +129,7 @@
     <View style="@style/StatusBarPanelSettingsPanelSeparator" />
 
     <!-- Notifications / Do not disturb -->
-    <LinearLayout
+<!--    <LinearLayout
             android:id="@+id/do_not_disturb"
             style="@style/StatusBarPanelSettingsRow"
             >
@@ -132,7 +151,7 @@
                 />
     </LinearLayout>
     <View style="@style/StatusBarPanelSettingsPanelSeparator" />
-
+-->
     <!-- Link to settings -->
     <LinearLayout
             android:id="@+id/settings"
@@ -147,6 +166,23 @@
         <TextView
                 style="@style/StatusBarPanelSettingsContents"
                 android:text="@string/status_bar_settings_settings_button"
+                />
+    </LinearLayout>
+    <View style="@style/StatusBarPanelSettingsPanelSeparator" />
+
+    <!-- Notifications / Power -->
+    <LinearLayout
+            android:id="@+id/power"
+            style="@style/StatusBarPanelSettingsRow"
+            >
+        <ImageView
+                android:id="@+id/power"
+                style="@style/StatusBarPanelSettingsIcon"
+                android:src="@drawable/ic_notify_clear_pressed"
+                />
+        <TextView
+                style="@style/StatusBarPanelSettingsContents"
+                android:text="@string/status_bar_settings_power"
                 />
     </LinearLayout>
     <View style="@style/StatusBarPanelSettingsPanelSeparator" />

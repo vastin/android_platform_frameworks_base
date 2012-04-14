@@ -1208,11 +1208,11 @@ TouchButtonAccumulator::TouchButtonAccumulator() :
 }
 
 void TouchButtonAccumulator::configure(InputDevice* device) {
-    mHaveBtnTouch = device->hasKey(BTN_TOUCH) || device->hasKey(BTN_LEFT);
+    mHaveBtnTouch = device->hasKey(BTN_TOUCH) || device->hasKey(BTN_MOUSE) || device->hasKey(BTN_LEFT);
 }
 
 void TouchButtonAccumulator::reset(InputDevice* device) {
-    mBtnTouch = device->isKeyPressed(BTN_TOUCH) || device->isKeyPressed(BTN_LEFT);
+    mBtnTouch = device->isKeyPressed(BTN_TOUCH) || device->isKeyPressed(BTN_MOUSE) || device->isKeyPressed(BTN_LEFT);
     mBtnStylus = device->isKeyPressed(BTN_STYLUS);
     mBtnStylus2 = device->isKeyPressed(BTN_STYLUS);
     mBtnToolFinger = device->isKeyPressed(BTN_TOOL_FINGER);
@@ -3381,9 +3381,9 @@ void TouchInputMapper::sync(nsecs_t when) {
             // We don't do this for internal touch screens to prevent them from waking
             // up in your pocket.
             // TODO: Use the input device configuration to control this behavior more finely.
-            if (getDevice()->isExternal()) {
+//            if (getDevice()->isExternal()) {
                 policyFlags |= POLICY_FLAG_WAKE_DROPPED;
-            }
+//            }
         }
 
         // Synthesize key down from raw buttons if needed.
